@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            div {
+                border: 1px solid gray;
+                margin: 10px;
+                padding: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div id="x">x</div>
+        
+        <input class="action" type="button" value="DOM操作実行">
+        
+        <script src="js/libs/jquery/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $('.action').click(function() {
+                    var y = $('<div>y</div>');
+                    $('#x').after(y);
+                });
+            });
+        </script>
+    </body>
+</html>
